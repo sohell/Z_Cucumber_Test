@@ -3,21 +3,27 @@ package stepDefinitions;
 import java.util.Properties;
 
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 
 import factory.BaseClass;
 import io.cucumber.java.en.*;
 import pageObjects.HomePage;
+import pageObjects.LoginPage;
+import pageObjects.MyAccountPage;
 import pageObjects.SearchPage;
 
 public class ProductCompareSteps {
 
 	HomePage hp;
 	SearchPage sp;
+	LoginPage lp;
+	MyAccountPage mp;
+	WebDriver driver;
 	Properties prop = BaseClass.getProperties();
 	
 	@Given("user enters product name {string} in the search field")
 	public void user_enters_product_name_in_the_search_field(String product) {
-		hp = new HomePage(BaseClass.driver);
+		hp = new HomePage(BaseClass.getDriver());
 		//hp.searchProduct(prop.getProperty("searchProductName"));
 		hp.searchProduct(product);
 	}
@@ -39,7 +45,7 @@ public class ProductCompareSteps {
 
 	@When("user clicks on compare option")
 	public void user_clicks_on_option() {
-		sp = new SearchPage(BaseClass.driver);
+		sp = new SearchPage(BaseClass.getDriver());
 		sp.clickCompare();
 	}
 
