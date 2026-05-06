@@ -35,7 +35,7 @@ public class Login_Steps
 	public void user_should_navigate_to_login_page() {
 		map = new MyAccountPage(BaseClass.getDriver());
 	   boolean flag = map.isAccountPageExist();
-	   Assert.assertEquals(false, flag);
+	   Assert.assertEquals(true, flag);
 	}
 
 }
