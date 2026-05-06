@@ -38,8 +38,7 @@ public class BasePage
 	}
 	
 	public WebElement waitForVisibility(WebElement element)
-	{
-		System.out.println("This is Base Page");
+  {
 		return wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
