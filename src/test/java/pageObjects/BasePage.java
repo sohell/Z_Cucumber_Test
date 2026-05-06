@@ -38,8 +38,13 @@ public class BasePage
 	}
 	
 	public WebElement waitForVisibility(WebElement element)
+<<<<<<< HEAD
 	{
+=======
+  {
+>>>>>>> 1e7a5b335869f16ee9c122b3410bef383337d5a0
 		return wait.until(ExpectedConditions.visibilityOf(element));
 	}
+	
 	
 }
