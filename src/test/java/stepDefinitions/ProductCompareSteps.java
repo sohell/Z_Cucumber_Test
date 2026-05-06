@@ -52,7 +52,7 @@ public class ProductCompareSteps {
 	@Then("success message should be displayed with product comparison link")
 	public void success_message_should_be_displayed_with_product_comparison_link() {
 		String cnfMsg = sp.getCompareMsg();
-		Assert.assertTrue(cnfMsg.contains("Success: You have added"))
+		Assert.assertTrue(cnfMsg.contains("Success: You have added"));
 	}
 
 //	@When("user clicks on {string} link")
