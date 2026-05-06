@@ -39,6 +39,7 @@ public class BasePage
 	
 	public WebElement waitForVisibility(WebElement element)
 	{
+		System.out.println("This is conflict");
 		return wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
